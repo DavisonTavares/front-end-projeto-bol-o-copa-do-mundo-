@@ -16,7 +16,7 @@ export const Login = () => {
     onSubmit: async (values) =>{
       const res = await axios({
         method: 'get',
-        baseURL: "https://api-blond-kappa.vercel.app",
+        baseURL: import.meta.env.VITE_API_URL,
         url: '/login',
         auth: {
           username: values.email,
