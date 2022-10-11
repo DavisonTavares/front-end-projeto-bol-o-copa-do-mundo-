@@ -66,7 +66,7 @@ export const Dashboard = () => {
         <header className="bg-red-500 text-white">
             <div className="container max-w-5xl flex justify-between p-4">
                 <img src="/img/logo-branco.png" className="w-28 md:w-40" />
-                <a href={`/${auth?.user?.username}-${auth?.user?.pontos}`}>
+                <a href={`/${auth?.user?.username}`}>
                     <Icon name="profile" className="w-10" />
                 </a>
             </div>
