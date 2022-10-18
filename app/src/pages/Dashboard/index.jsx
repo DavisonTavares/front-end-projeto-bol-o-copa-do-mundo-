@@ -9,8 +9,8 @@ import { Card, DateSelect, Icon } from '~/components'
 
 export const Dashboard = () => {
     const hora = new Date().toISOString('pt-BR')
-    //const [currentDate, setDate] = useState(formatISO(new Date(hora)))
-    const [currentDate, setDate] = useState(formatISO(hora))
+    const [currentDate, setDate] = useState(formatISO(new Date(hora)))
+    //const [currentDate, setDate] = useState(formatISO(hora))
     const [auth, setAuth] = useLocalStorage('auth', {})
 
     
