@@ -38,7 +38,7 @@ export const Profile = () => {
     const res = await axios({
       method: "get",
       baseURL: import.meta.env.VITE_API_URL,
-      url: "/games",
+      url: "/listpro",
       params,
     });
 
