@@ -7,12 +7,14 @@ const validationSchema = yup.object().shape({
     homeTeamScore: yup.string().required(),
     awayTeamScore: yup.string().required()
 })
+const dataAtual = new Date().toISOString('pt-BR')
 
-export const Card = ({ disabled =false, gameId, homeTeam, awayTeam, homeTeamScore=0, awayTeamScore=0, gameTime }) => {
+export const Card = ({ currentDate, disabled =false, gameId, homeTeam, awayTeam, homeTeamScore=0, awayTeamScore=0, gameTime }) => {
     const [auth] = useLocalStorage('auth')
     
     const formik = useFormik({
         onSubmit: (values) => {
+            if(dataAtual <= currentDate){
             axios({
                 method: 'post',
                 baseURL: import.meta.env.VITE_API_URL,
@@ -25,6 +27,9 @@ export const Card = ({ disabled =false, gameId, homeTeam, awayTeam, homeTeamScor
                     gameId
                 }
             })
+            }else{
+                alert("Não foi possivel realizar o palpite")
+            }
         },
         initialValues: {
             homeTeamScore,
