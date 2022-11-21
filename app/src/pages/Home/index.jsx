@@ -15,7 +15,7 @@ export function Home(){
                         slot={'8371110381'}
                        format={'auto'} 
                        responsive={"true"}
-                       style={{display:'block'}
+                       style={{display:'block'}}
                        />
             <a href="/login" className="text-center text-red-700 bg-white text-xl px-8 py-4 rounded-2xl">
               Entrar
