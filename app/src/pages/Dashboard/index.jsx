@@ -94,6 +94,7 @@ export const Dashboard = () => {
                         return (
                             <>
                             <Card 
+                                currentDate={currentDate}
                                 key={game.id}
                                 gameId={game.id}
                                 homeTeam={game.homeTeam}
