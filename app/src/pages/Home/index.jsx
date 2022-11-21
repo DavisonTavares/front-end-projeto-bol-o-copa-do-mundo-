@@ -12,11 +12,10 @@ export function Home(){
           <div className="flex flex-col space-y-6 md:flex-1 md:text-left">
             <h1 className="text-3xl text-center font-bold">Seu palpite vale ouro, aposte já! </h1>
             <ReactAdsense client={'ca-pub-4034082416666217'}
-                       slot={'2080200051'}
-                       layout={'in-article'}
-                       format={'fluid'} 
-                       adTest={"on"}
-                       style={{width: "100%", height: '25%', background: '#000'}}
+                        slot={'8371110381'}
+                       format={'auto'} 
+                       responsive={"true"}
+                       style={{display:'block'}
                        />
             <a href="/login" className="text-center text-red-700 bg-white text-xl px-8 py-4 rounded-2xl">
               Entrar
