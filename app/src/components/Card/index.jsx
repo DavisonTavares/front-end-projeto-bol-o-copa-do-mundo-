@@ -11,7 +11,6 @@ let dataAtual = new Date().toISOString()
 
 export const Card = ({ hora, disabled =false, gameId, homeTeam, awayTeam, homeTeamScore=0, awayTeamScore=0, gameTime }) => {
     const [auth] = useLocalStorage('auth')
-    dataAtual = formatISO(new Date( dataAtual))
     const formik = useFormik({
         onSubmit: (values) => {
             if((hora >= dataAtual)){
