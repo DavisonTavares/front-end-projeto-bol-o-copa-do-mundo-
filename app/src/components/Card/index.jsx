@@ -7,15 +7,14 @@ const validationSchema = yup.object().shape({
     homeTeamScore: yup.string().required(),
     awayTeamScore: yup.string().required()
 })
-const dataAtual = new Date().toISOString('pt-BR')
+let dataAtual = new Date().toISOString()
 
-export const Card = ({ currentDate, disabled =false, gameId, homeTeam, awayTeam, homeTeamScore=0, awayTeamScore=0, gameTime }) => {
+export const Card = ({ hora, disabled =false, gameId, homeTeam, awayTeam, homeTeamScore=0, awayTeamScore=0, gameTime }) => {
     const [auth] = useLocalStorage('auth')
-    console.log(dataAtual)
-    console.log(currentDate)
+    dataAtual = formatISO(new Date( dataAtual))
     const formik = useFormik({
         onSubmit: (values) => {
-            if(dataAtual <= currentDate){
+            if((hora >= dataAtual)){
             axios({
                 method: 'post',
                 baseURL: import.meta.env.VITE_API_URL,
