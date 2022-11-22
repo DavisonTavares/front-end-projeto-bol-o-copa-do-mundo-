@@ -11,7 +11,8 @@ const dataAtual = new Date().toISOString('pt-BR')
 
 export const Card = ({ currentDate, disabled =false, gameId, homeTeam, awayTeam, homeTeamScore=0, awayTeamScore=0, gameTime }) => {
     const [auth] = useLocalStorage('auth')
-    
+    console.log(dataAtual)
+    console.log(currentDate)
     const formik = useFormik({
         onSubmit: (values) => {
             if(dataAtual <= currentDate){
