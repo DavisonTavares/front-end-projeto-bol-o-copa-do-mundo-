@@ -104,6 +104,7 @@ export const Profile = () => {
                 return (
                   <>
                     <Card
+                      hora={game.gameTime}
                       key={game.id}
                       gameId={game.id}
                       homeTeam={game.homeTeam}
